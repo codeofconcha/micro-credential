@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bryan Concha - Last Day</title>
+  <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+  <h1 class="title">Modal Window</h1>
+  <form action="templates/checkout.html" method="post">
+  <a href="#openModal" class="link">Click Here</a>
+  <div class="modalWindow" id="openModal">
+    <section class="content">
+      <a class="close" href="#">&#10005;
+      </a>
+      <section class="info">
+      <img src="images/Sonic_Adventure_2.jpg" alt="Sonic Adventure 2">
+      <div class="p"><span id="productName" >Sonic Adventure 2</span><i>
+        <div>
+      <br>the best sonic game ever made</i>
+      <hr>
+      A video game that set the standard for any sonic game and will always be know as the GOAT
+      <hr>
+    </div>
+      
+      <span id="productPrice">$69.99</span>
+      <input class="add" type="submit" value="Add to Bag" onclick="passvalue();">
+        </div>
+      </section>
+    </section>
+  </div>
+</form>
+  <script type="text/javascript">
+    function passvalue(){
+          let productName = document.querySelector('#productName').textContent;
+          sessionStorage.setItem('product_name', productName);
+          
+          let productPrice = document.querySelector('#productPrice').textContent;
+          sessionStorage.setItem('product_price', productPrice);
+          console.log(productPrice);
+        }
+
+  </script>
+</body>
+</html>
